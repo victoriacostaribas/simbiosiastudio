@@ -4,12 +4,30 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portfolio — SIMBIOSIA</title>
-<meta name="description" content="Piezas conceptuales de SIMBIOSIA: ilustración científica de línea aplicada a biología marina, microbiología, biotecnología y ecosistemas.">
+<meta name="description" content="Portfolio de SIMBIOSIA: ilustración científica, infografía y modelado 3D aplicados a biología marina, biotecnología y divulgación.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<style>
+  .person-head{ display:flex; align-items:baseline; gap:16px; margin:90px 0 40px; flex-wrap:wrap; }
+  .person-head:first-of-type{ margin-top:0; }
+  .person-head h2{ font-family:'Shippori Mincho', serif; font-size:clamp(24px,3vw,34px); font-weight:700; }
+  .person-head .role{ font-family:'JetBrains Mono', monospace; font-size:11.5px; letter-spacing:0.1em; text-transform:uppercase; color:var(--vermillion); }
+  .soon-card{
+    border:1px dashed var(--line); padding:40px 32px; margin-bottom:100px;
+    display:flex; align-items:center; gap:20px; color:rgba(27,24,16,0.6);
+  }
+  .soon-card svg{ width:30px; height:30px; flex-shrink:0; color:var(--vermillion); }
+  .soon-card p{ font-size:14.5px; }
+  .studio-section{ margin-top:60px; padding-top:80px; border-top:1px solid var(--line); }
+  .pf-art-photo{ padding:0 !important; overflow:hidden; }
+  @media (max-width:900px){
+    .person-head{ margin:60px 0 28px; }
+    .studio-section{ margin-top:20px; padding-top:50px; }
+  }
+</style>
 </head>
 <body data-page="portfolio">
 
@@ -32,8 +50,8 @@
 <header class="page-head">
   <div class="wrap">
     <div class="eyebrow" data-i18n="head.eyebrow">Portfolio</div>
-    <h1 data-i18n="head.h1">Láminas de campo, no catálogo de clientes.</h1>
-    <p class="lead" data-i18n="head.lead">Una selección de piezas conceptuales propias que muestran cómo pensamos una imagen científica antes de aplicarlo a un proyecto real.</p>
+    <h1 data-i18n="head.h1">Ciencia, dibujada e ilustrada por nosotros.</h1>
+    <p class="lead" data-i18n="head.lead">Trabajo real de cada miembro del equipo — a medida que cada portfolio va tomando forma.</p>
   </div>
 </header>
 
@@ -41,134 +59,249 @@
   <div class="wrap">
     <div class="box">
       <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><line x1="12" y1="11" x2="12" y2="16.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="7.6" r="1.1" fill="currentColor"/></svg>
-      <p data-i18n="note.p">Somos un estudio joven: estas piezas son exploraciones propias, no trabajos de cliente. Estamos construyendo nuestros primeros casos reales — si quieres ser uno de ellos, hablemos.</p>
+      <p data-i18n="note.p">Estamos construyendo el portfolio del estudio pieza a pieza. Por ahora puedes ver el trabajo de Victoria; el de Laura y Patxi se irá añadiendo próximamente.</p>
     </div>
   </div>
 </section>
 
 <section class="reveal">
   <div class="wrap">
+
+    <div class="person-head">
+      <h2>Victoria</h2>
+      <span class="role" data-i18n="victoria.role">Bioquímica y biología molecular</span>
+    </div>
     <div class="portfolio-grid">
 
       <div class="pf-card">
-        <div class="pf-art">
-          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="color:var(--vermillion)">
-            <path d="M52,50 L52.6,51.5 L52,53.47 L50,55 L47,55.2 L43.9,53.5 L42,50 L42.2,45.5 L45,41.3 L50,39 L56,39.6 L61.3,43.5 L64,50 L63,57.5 L58,63.9 L50,67 L41,65.6 L33.5,59.5 L30,50 L31.8,39.5 L39,30.9 L50,27 L62,29.2 L71.7,37.5 L76,50" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-            <circle cx="52" cy="50" r="1.8" fill="currentColor"/>
-          </svg>
-        </div>
+        <div class="pf-art pf-art-photo"><img src="pf-leatherback.jpg" alt="Infografía de tortuga laúd" style="width:100%; height:100%; object-fit:cover;"></div>
         <div class="pf-info">
-          <span class="tag" data-i18n="pf1.tag">Paleontología · Lám. 01</span>
-          <h3 data-i18n="pf1.h3">Cartografía de una concha</h3>
-          <p data-i18n="pf1.p">Estudio de espiral logarítmica aplicado a la estructura de un amonites, pensado para figura editorial.</p>
+          <span class="tag" data-i18n="v1.tag">Infografía · Divulgación</span>
+          <h3 data-i18n="v1.h3">Tortuga laúd (Dermochelys coriacea)</h3>
+          <p data-i18n="v1.p">Infografía científica sobre anatomía, migración y conservación de la tortuga laúd.</p>
         </div>
       </div>
 
       <div class="pf-card">
-        <div class="pf-art">
-          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="color:var(--periquito)">
-            <path d="M20,42 C20,20 35,8 50,8 C65,8 80,20 80,42 C68,50 32,50 20,42 Z" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/>
-            <path d="M28,50 C26,60 32,66 28,76" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
-            <path d="M40,52 C38,64 44,70 40,84" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
-            <path d="M52,53 C54,65 48,72 52,88" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
-            <path d="M64,52 C66,63 60,70 64,82" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
-            <path d="M74,48 C77,58 71,64 75,74" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
-          </svg>
-        </div>
+        <div class="pf-art pf-art-photo"><img src="pf-ionchannel.jpg" alt="Visualización 3D de canal iónico" style="width:100%; height:100%; object-fit:cover;"></div>
         <div class="pf-info">
-          <span class="tag" data-i18n="pf2.tag">Biología marina · Lám. 02</span>
-          <h3 data-i18n="pf2.h3">Anatomía de una medusa</h3>
-          <p data-i18n="pf2.p">Línea limpia y anatomía simplificada para material educativo sobre cnidarios.</p>
+          <span class="tag" data-i18n="v2.tag">3D · Biología molecular</span>
+          <h3 data-i18n="v2.h3">Canal iónico transmembrana</h3>
+          <p data-i18n="v2.p">Visualización 3D de una membrana celular con canales de transporte iónico.</p>
         </div>
       </div>
 
       <div class="pf-card">
-        <div class="pf-art">
-          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="color:var(--gold)">
-            <path d="M25,6 C45,22 5,34 25,50 C45,66 5,78 25,94" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/>
-            <path d="M75,6 C55,22 95,34 75,50 C55,66 95,78 75,94" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/>
-            <g stroke="currentColor" stroke-width="1.8" opacity="0.7">
-              <line x1="25" y1="14" x2="75" y2="14"/>
-              <line x1="21" y1="28" x2="79" y2="28"/>
-              <line x1="25" y1="50" x2="75" y2="50"/>
-              <line x1="21" y1="72" x2="79" y2="72"/>
-              <line x1="25" y1="86" x2="75" y2="86"/>
-            </g>
-          </svg>
-        </div>
+        <div class="pf-art pf-art-photo"><img src="pf-octopus.jpg" alt="Ilustración de pulpo en gouache" style="width:100%; height:100%; object-fit:cover;"></div>
         <div class="pf-info">
-          <span class="tag" data-i18n="pf3.tag">Biotecnología · Lám. 03</span>
-          <h3 data-i18n="pf3.h3">Doble hélice, vista editorial</h3>
-          <p data-i18n="pf3.p">Interpretación gráfica de una secuencia genética, pensada para portada de revista.</p>
+          <span class="tag" data-i18n="v3.tag">Ilustración · Gouache</span>
+          <h3 data-i18n="v3.h3">Pulpo (Octopus vulgaris)</h3>
+          <p data-i18n="v3.p">Estudio naturalista en gouache sobre fondo oscuro.</p>
         </div>
       </div>
 
       <div class="pf-card">
-        <div class="pf-art">
-          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="color:var(--periquito)">
-            <g stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M50,95 L50,60"/>
-              <path d="M50,60 L30,35"/>
-              <path d="M50,60 L68,32"/>
-              <path d="M30,35 L18,15"/>
-              <path d="M30,35 L38,10"/>
-              <path d="M68,32 L60,8"/>
-              <path d="M68,32 L82,12"/>
-            </g>
-            <circle cx="50" cy="95" r="3" fill="currentColor"/>
-          </svg>
-        </div>
+        <div class="pf-art pf-art-photo"><img src="pf-polyprion.jpg" alt="Ficha de especie Polyprion americanus" style="width:100%; height:100%; object-fit:cover;"></div>
         <div class="pf-info">
-          <span class="tag" data-i18n="pf4.tag">Climate tech · Lám. 04</span>
-          <h3 data-i18n="pf4.h3">Ramificación coralina</h3>
-          <p data-i18n="pf4.p">Estructura de crecimiento de coral para pieza de divulgación sobre blanqueamiento.</p>
+          <span class="tag" data-i18n="v4.tag">Ficha de especie · Digital</span>
+          <h3 data-i18n="v4.h3">Polyprion americanus — Mero de roca</h3>
+          <p data-i18n="v4.p">Ficha divulgativa sobre pesca sostenible: temporada, zona FAO y talla mínima.</p>
         </div>
       </div>
 
       <div class="pf-card">
-        <div class="pf-art">
-          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="color:var(--vermillion)">
-            <g stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
-              <line x1="50" y1="50" x2="88" y2="50"/>
-              <line x1="50" y1="50" x2="77" y2="77"/>
-              <line x1="50" y1="50" x2="50" y2="88"/>
-              <line x1="50" y1="50" x2="23" y2="77"/>
-              <line x1="50" y1="50" x2="12" y2="50"/>
-              <line x1="50" y1="50" x2="23" y2="23"/>
-              <line x1="50" y1="50" x2="50" y2="12"/>
-              <line x1="50" y1="50" x2="77" y2="23"/>
-            </g>
-            <circle cx="50" cy="50" r="9" stroke="currentColor" stroke-width="2.2"/>
-            <circle cx="50" cy="50" r="2.5" fill="currentColor"/>
-          </svg>
-        </div>
+        <div class="pf-art pf-art-photo"><img src="pf-membrane.jpg" alt="Modelado 3D de membrana celular" style="width:100%; height:100%; object-fit:cover;"></div>
         <div class="pf-info">
-          <span class="tag" data-i18n="pf5.tag">Microbiología · Lám. 05</span>
-          <h3 data-i18n="pf5.h3">Radiolario, geometría microscópica</h3>
-          <p data-i18n="pf5.p">Simetría radial de un organismo planctónico, explorada como patrón editorial.</p>
+          <span class="tag" data-i18n="v5.tag">3D · Blender</span>
+          <h3 data-i18n="v5.h3">Membrana celular</h3>
+          <p data-i18n="v5.p">Modelado y render de una bicapa lipídica con proteínas de membrana.</p>
         </div>
       </div>
 
       <div class="pf-card">
-        <div class="pf-art">
-          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="color:var(--gold)">
-            <ellipse cx="50" cy="50" rx="34" ry="20" stroke="currentColor" stroke-width="2.6"/>
-            <line x1="50" y1="30" x2="50" y2="70" stroke="currentColor" stroke-width="2"/>
-            <g stroke="currentColor" stroke-width="1.6" opacity="0.75">
-              <line x1="24" y1="42" x2="76" y2="42"/>
-              <line x1="20" y1="50" x2="80" y2="50"/>
-              <line x1="24" y1="58" x2="76" y2="58"/>
-            </g>
-          </svg>
-        </div>
+        <div class="pf-art pf-art-photo"><img src="pf-viola.jpg" alt="Lámina botánica de Viola x wittrockiana" style="width:100%; height:100%; object-fit:cover;"></div>
         <div class="pf-info">
-          <span class="tag" data-i18n="pf6.tag">Microbiología · Lám. 06</span>
-          <h3 data-i18n="pf6.h3">Frústula de diatomea</h3>
-          <p data-i18n="pf6.p">Patrón estructural de una diatomea, base para una serie sobre vida oceánica invisible.</p>
+          <span class="tag" data-i18n="v6.tag">Lámina botánica · Acuarela</span>
+          <h3 data-i18n="v6.h3">Viola x wittrockiana</h3>
+          <p data-i18n="v6.p">Estudio botánico en acuarela con detalle de raíz y escala.</p>
+        </div>
+      </div>
+
+      <div class="pf-card">
+        <div class="pf-art pf-art-photo"><img src="pf-butterfly.jpg" alt="Ilustración de mariposa monarca" style="width:100%; height:100%; object-fit:cover;"></div>
+        <div class="pf-info">
+          <span class="tag" data-i18n="v7.tag">Ilustración naturalista</span>
+          <h3 data-i18n="v7.h3">Mariposa monarca</h3>
+          <p data-i18n="v7.p">Ilustración en tinta y acuarela de Danaus plexippus.</p>
+        </div>
+      </div>
+
+      <div class="pf-card">
+        <div class="pf-art pf-art-photo"><img src="pf-fagus.jpg" alt="Lámina botánica de Fagus orientalis" style="width:100%; height:100%; object-fit:cover;"></div>
+        <div class="pf-info">
+          <span class="tag" data-i18n="v8.tag">Lámina botánica · UPV/EHU</span>
+          <h3 data-i18n="v8.h3">Fagus orientalis — Haya oriental</h3>
+          <p data-i18n="v8.p">Lámina bilingüe (euskera-castellano) para el arboretum de la universidad.</p>
+        </div>
+      </div>
+
+      <div class="pf-card">
+        <div class="pf-art pf-art-photo"><img src="pf-gohetita.jpg" alt="Ilustración de mineral Gohetita" style="width:100%; height:100%; object-fit:cover;"></div>
+        <div class="pf-info">
+          <span class="tag" data-i18n="v9.tag">Ilustración mineralógica · Acuarela</span>
+          <h3 data-i18n="v9.h3">Gohetita — Mina Malaespera</h3>
+          <p data-i18n="v9.p">Pieza para la lámina colectiva de minerales de la mina Malaespera (Bilbao), UPV/EHU.</p>
         </div>
       </div>
 
     </div>
+
+    <div class="person-head">
+      <h2>Laura</h2>
+      <span class="role" data-i18n="laura.role">Ciencias del mar</span>
+    </div>
+    <div class="soon-card">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M12 8v5l3.5 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/></svg>
+      <p data-i18n="laura.soon">Portfolio en construcción — próximamente.</p>
+    </div>
+
+    <div class="person-head">
+      <h2>Patxi</h2>
+      <span class="role" data-i18n="patxi.role">Ingeniería y 3D</span>
+    </div>
+    <div class="soon-card">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M12 8v5l3.5 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/></svg>
+      <p data-i18n="patxi.soon">Portfolio en construcción — próximamente.</p>
+    </div>
+
+    <div class="studio-section">
+      <div class="person-head" style="margin-top:0;">
+        <h2 data-i18n="studio.h2">Exploraciones del estudio</h2>
+        <span class="role" data-i18n="studio.role">Piezas conceptuales, no atribuidas a cliente</span>
+      </div>
+      <div class="portfolio-grid">
+
+        <div class="pf-card">
+          <div class="pf-art">
+            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="color:var(--vermillion)">
+              <path d="M52,50 L52.6,51.5 L52,53.47 L50,55 L47,55.2 L43.9,53.5 L42,50 L42.2,45.5 L45,41.3 L50,39 L56,39.6 L61.3,43.5 L64,50 L63,57.5 L58,63.9 L50,67 L41,65.6 L33.5,59.5 L30,50 L31.8,39.5 L39,30.9 L50,27 L62,29.2 L71.7,37.5 L76,50" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="52" cy="50" r="1.8" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="pf-info">
+            <span class="tag" data-i18n="pf1.tag">Paleontología · Lám. 01</span>
+            <h3 data-i18n="pf1.h3">Cartografía de una concha</h3>
+            <p data-i18n="pf1.p">Estudio de espiral logarítmica aplicado a la estructura de un amonites, pensado para figura editorial.</p>
+          </div>
+        </div>
+
+        <div class="pf-card">
+          <div class="pf-art">
+            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="color:var(--periquito)">
+              <path d="M20,42 C20,20 35,8 50,8 C65,8 80,20 80,42 C68,50 32,50 20,42 Z" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/>
+              <path d="M28,50 C26,60 32,66 28,76" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+              <path d="M40,52 C38,64 44,70 40,84" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+              <path d="M52,53 C54,65 48,72 52,88" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+              <path d="M64,52 C66,63 60,70 64,82" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+              <path d="M74,48 C77,58 71,64 75,74" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="pf-info">
+            <span class="tag" data-i18n="pf2.tag">Biología marina · Lám. 02</span>
+            <h3 data-i18n="pf2.h3">Anatomía de una medusa</h3>
+            <p data-i18n="pf2.p">Línea limpia y anatomía simplificada para material educativo sobre cnidarios.</p>
+          </div>
+        </div>
+
+        <div class="pf-card">
+          <div class="pf-art">
+            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="color:var(--gold)">
+              <path d="M25,6 C45,22 5,34 25,50 C45,66 5,78 25,94" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/>
+              <path d="M75,6 C55,22 95,34 75,50 C55,66 95,78 75,94" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/>
+              <g stroke="currentColor" stroke-width="1.8" opacity="0.7">
+                <line x1="25" y1="14" x2="75" y2="14"/>
+                <line x1="21" y1="28" x2="79" y2="28"/>
+                <line x1="25" y1="50" x2="75" y2="50"/>
+                <line x1="21" y1="72" x2="79" y2="72"/>
+                <line x1="25" y1="86" x2="75" y2="86"/>
+              </g>
+            </svg>
+          </div>
+          <div class="pf-info">
+            <span class="tag" data-i18n="pf3.tag">Biotecnología · Lám. 03</span>
+            <h3 data-i18n="pf3.h3">Doble hélice, vista editorial</h3>
+            <p data-i18n="pf3.p">Interpretación gráfica de una secuencia genética, pensada para portada de revista.</p>
+          </div>
+        </div>
+
+        <div class="pf-card">
+          <div class="pf-art">
+            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="color:var(--periquito)">
+              <g stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M50,95 L50,60"/>
+                <path d="M50,60 L30,35"/>
+                <path d="M50,60 L68,32"/>
+                <path d="M30,35 L18,15"/>
+                <path d="M30,35 L38,10"/>
+                <path d="M68,32 L60,8"/>
+                <path d="M68,32 L82,12"/>
+              </g>
+              <circle cx="50" cy="95" r="3" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="pf-info">
+            <span class="tag" data-i18n="pf4.tag">Climate tech · Lám. 04</span>
+            <h3 data-i18n="pf4.h3">Ramificación coralina</h3>
+            <p data-i18n="pf4.p">Estructura de crecimiento de coral para pieza de divulgación sobre blanqueamiento.</p>
+          </div>
+        </div>
+
+        <div class="pf-card">
+          <div class="pf-art">
+            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="color:var(--vermillion)">
+              <g stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+                <line x1="50" y1="50" x2="88" y2="50"/>
+                <line x1="50" y1="50" x2="77" y2="77"/>
+                <line x1="50" y1="50" x2="50" y2="88"/>
+                <line x1="50" y1="50" x2="23" y2="77"/>
+                <line x1="50" y1="50" x2="12" y2="50"/>
+                <line x1="50" y1="50" x2="23" y2="23"/>
+                <line x1="50" y1="50" x2="50" y2="12"/>
+                <line x1="50" y1="50" x2="77" y2="23"/>
+              </g>
+              <circle cx="50" cy="50" r="9" stroke="currentColor" stroke-width="2.2"/>
+              <circle cx="50" cy="50" r="2.5" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="pf-info">
+            <span class="tag" data-i18n="pf5.tag">Microbiología · Lám. 05</span>
+            <h3 data-i18n="pf5.h3">Radiolario, geometría microscópica</h3>
+            <p data-i18n="pf5.p">Simetría radial de un organismo planctónico, explorada como patrón editorial.</p>
+          </div>
+        </div>
+
+        <div class="pf-card">
+          <div class="pf-art">
+            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="color:var(--gold)">
+              <ellipse cx="50" cy="50" rx="34" ry="20" stroke="currentColor" stroke-width="2.6"/>
+              <line x1="50" y1="30" x2="50" y2="70" stroke="currentColor" stroke-width="2"/>
+              <g stroke="currentColor" stroke-width="1.6" opacity="0.75">
+                <line x1="24" y1="42" x2="76" y2="42"/>
+                <line x1="20" y1="50" x2="80" y2="50"/>
+                <line x1="24" y1="58" x2="76" y2="58"/>
+              </g>
+            </svg>
+          </div>
+          <div class="pf-info">
+            <span class="tag" data-i18n="pf6.tag">Microbiología · Lám. 06</span>
+            <h3 data-i18n="pf6.h3">Frústula de diatomea</h3>
+            <p data-i18n="pf6.p">Patrón estructural de una diatomea, base para una serie sobre vida oceánica invisible.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -193,9 +326,22 @@
     es: {
       "nav.home":"Home","nav.about":"About","nav.portfolio":"Portfolio","nav.contact":"Contact","nav.cta":"Hablemos →",
       "head.eyebrow":"Portfolio",
-      "head.h1":"Láminas de campo, no catálogo de clientes.",
-      "head.lead":"Una selección de piezas conceptuales propias que muestran cómo pensamos una imagen científica antes de aplicarlo a un proyecto real.",
-      "note.p":"Somos un estudio joven: estas piezas son exploraciones propias, no trabajos de cliente. Estamos construyendo nuestros primeros casos reales — si quieres ser uno de ellos, hablemos.",
+      "head.h1":"Ciencia, dibujada e ilustrada por nosotros.",
+      "head.lead":"Trabajo real de cada miembro del equipo — a medida que cada portfolio va tomando forma.",
+      "note.p":"Estamos construyendo el portfolio del estudio pieza a pieza. Por ahora puedes ver el trabajo de Victoria; el de Laura y Patxi se irá añadiendo próximamente.",
+      "victoria.role":"Bioquímica y biología molecular",
+      "v1.tag":"Infografía · Divulgación","v1.h3":"Tortuga laúd (Dermochelys coriacea)","v1.p":"Infografía científica sobre anatomía, migración y conservación de la tortuga laúd.",
+      "v2.tag":"3D · Biología molecular","v2.h3":"Canal iónico transmembrana","v2.p":"Visualización 3D de una membrana celular con canales de transporte iónico.",
+      "v3.tag":"Ilustración · Gouache","v3.h3":"Pulpo (Octopus vulgaris)","v3.p":"Estudio naturalista en gouache sobre fondo oscuro.",
+      "v4.tag":"Ficha de especie · Digital","v4.h3":"Polyprion americanus — Mero de roca","v4.p":"Ficha divulgativa sobre pesca sostenible: temporada, zona FAO y talla mínima.",
+      "v5.tag":"3D · Blender","v5.h3":"Membrana celular","v5.p":"Modelado y render de una bicapa lipídica con proteínas de membrana.",
+      "v6.tag":"Lámina botánica · Acuarela","v6.h3":"Viola x wittrockiana","v6.p":"Estudio botánico en acuarela con detalle de raíz y escala.",
+      "v7.tag":"Ilustración naturalista","v7.h3":"Mariposa monarca","v7.p":"Ilustración en tinta y acuarela de Danaus plexippus.",
+      "v8.tag":"Lámina botánica · UPV/EHU","v8.h3":"Fagus orientalis — Haya oriental","v8.p":"Lámina bilingüe (euskera-castellano) para el arboretum de la universidad.",
+      "v9.tag":"Ilustración mineralógica · Acuarela","v9.h3":"Gohetita — Mina Malaespera","v9.p":"Pieza para la lámina colectiva de minerales de la mina Malaespera (Bilbao), UPV/EHU.",
+      "laura.role":"Ciencias del mar","laura.soon":"Portfolio en construcción — próximamente.",
+      "patxi.role":"Ingeniería y 3D","patxi.soon":"Portfolio en construcción — próximamente.",
+      "studio.h2":"Exploraciones del estudio","studio.role":"Piezas conceptuales, no atribuidas a cliente",
       "pf1.tag":"Paleontología · Lám. 01","pf1.h3":"Cartografía de una concha","pf1.p":"Estudio de espiral logarítmica aplicado a la estructura de un amonites, pensado para figura editorial.",
       "pf2.tag":"Biología marina · Lám. 02","pf2.h3":"Anatomía de una medusa","pf2.p":"Línea limpia y anatomía simplificada para material educativo sobre cnidarios.",
       "pf3.tag":"Biotecnología · Lám. 03","pf3.h3":"Doble hélice, vista editorial","pf3.p":"Interpretación gráfica de una secuencia genética, pensada para portada de revista.",
@@ -208,9 +354,22 @@
     en: {
       "nav.home":"Home","nav.about":"About","nav.portfolio":"Portfolio","nav.contact":"Contact","nav.cta":"Let's talk →",
       "head.eyebrow":"Portfolio",
-      "head.h1":"Field plates, not a client catalogue.",
-      "head.lead":"A selection of our own concept pieces, showing how we think through a scientific image before applying it to a real project.",
-      "note.p":"We're a young studio: these pieces are our own explorations, not client work. We're building our first real case studies — if you'd like to be one of them, let's talk.",
+      "head.h1":"Science, drawn and illustrated by us.",
+      "head.lead":"Real work from each member of the team — as each portfolio takes shape.",
+      "note.p":"We're building the studio's portfolio piece by piece. For now you can see Victoria's work; Laura's and Patxi's will be added soon.",
+      "victoria.role":"Biochemistry & molecular biology",
+      "v1.tag":"Infographic · Outreach","v1.h3":"Leatherback sea turtle (Dermochelys coriacea)","v1.p":"A scientific infographic on the anatomy, migration and conservation of the leatherback turtle.",
+      "v2.tag":"3D · Molecular biology","v2.h3":"Transmembrane ion channel","v2.p":"A 3D visualisation of a cell membrane with ion transport channels.",
+      "v3.tag":"Illustration · Gouache","v3.h3":"Octopus (Octopus vulgaris)","v3.p":"A naturalistic gouache study on a dark background.",
+      "v4.tag":"Species sheet · Digital","v4.h3":"Polyprion americanus — Wreckfish","v4.p":"An outreach sheet on sustainable fishing: season, FAO zone and minimum size.",
+      "v5.tag":"3D · Blender","v5.h3":"Cell membrane","v5.p":"Modelling and render of a lipid bilayer with membrane proteins.",
+      "v6.tag":"Botanical plate · Watercolour","v6.h3":"Viola x wittrockiana","v6.p":"A botanical watercolour study with root detail and scale.",
+      "v7.tag":"Natural history illustration","v7.h3":"Monarch butterfly","v7.p":"An ink and watercolour illustration of Danaus plexippus.",
+      "v8.tag":"Botanical plate · UPV/EHU","v8.h3":"Fagus orientalis — Oriental beech","v8.p":"A bilingual plate (Basque-Spanish) for the university's arboretum.",
+      "v9.tag":"Mineralogical illustration · Watercolour","v9.h3":"Goethite — Malaespera mine","v9.p":"A piece from the collective mineral plate for the Malaespera mine (Bilbao), UPV/EHU.",
+      "laura.role":"Marine science","laura.soon":"Portfolio under construction — coming soon.",
+      "patxi.role":"Engineering & 3D","patxi.soon":"Portfolio under construction — coming soon.",
+      "studio.h2":"Studio explorations","studio.role":"Concept pieces, not attributed to a client",
       "pf1.tag":"Palaeontology · Plate 01","pf1.h3":"Mapping a shell","pf1.p":"A logarithmic spiral study applied to ammonite structure, built for an editorial figure.",
       "pf2.tag":"Marine biology · Plate 02","pf2.h3":"Anatomy of a jellyfish","pf2.p":"Clean line and simplified anatomy for educational material on cnidarians.",
       "pf3.tag":"Biotech · Plate 03","pf3.h3":"Double helix, editorial view","pf3.p":"A graphic interpretation of a gene sequence, designed for a journal cover.",
