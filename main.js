@@ -58,6 +58,57 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', () => { if (window.innerWidth > 900) closeMenu(); });
   }
 
+  /* ---------- Portfolio lightbox (click to enlarge) ---------- */
+  const pfCards = document.querySelectorAll('.pf-card');
+  if (pfCards.length) {
+    const overlay = document.createElement('div');
+    overlay.className = 'lightbox-overlay';
+    const content = document.createElement('div');
+    content.className = 'lightbox-content';
+    overlay.appendChild(content);
+
+    const closeBtn = document.createElement('button');
+    closeBtn.className = 'lightbox-close';
+    closeBtn.innerHTML = '&times;';
+    closeBtn.setAttribute('aria-label', 'Close');
+    closeBtn.style.display = 'none';
+
+    document.body.appendChild(overlay);
+    document.body.appendChild(closeBtn);
+
+    function closeLightbox() {
+      overlay.classList.remove('open');
+      closeBtn.style.display = 'none';
+      document.body.classList.remove('lightbox-open');
+    }
+    function openLightbox(innerHTML, caption) {
+      content.innerHTML = innerHTML + (caption ? `<div class="lightbox-caption">${caption}</div>` : '');
+      overlay.classList.add('open');
+      closeBtn.style.display = 'flex';
+      document.body.classList.add('lightbox-open');
+    }
+
+    pfCards.forEach(card => {
+      const art = card.querySelector('.pf-art');
+      if (!art) return;
+      art.addEventListener('click', () => {
+        const img = art.querySelector('img');
+        const svg = art.querySelector('svg');
+        const titleEl = card.querySelector('.pf-info h3');
+        const caption = titleEl ? titleEl.textContent : '';
+        if (img) {
+          openLightbox(`<img src="${img.getAttribute('src')}" alt="${img.getAttribute('alt') || ''}">`, caption);
+        } else if (svg) {
+          openLightbox(svg.outerHTML, caption);
+        }
+      });
+    });
+
+    overlay.addEventListener('click', (e) => { if (e.target === overlay) closeLightbox(); });
+    closeBtn.addEventListener('click', closeLightbox);
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
+  }
+
   /* ---------- Floating ambient sparkles ---------- */
   const spiralSVG = '<svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M31,30 L31.4,31.1 L31,32.3 L29.8,33 L28.1,33.1 L26.5,32.2 L25.8,30 L26,27.5 L27.7,25.3 L30.3,24.4 L33.3,25 L36.5,27.4 L38,30 L37.4,34.2 L34.8,38 L30,40.1 L24.5,39.6 L19.9,35.9 L18,30 L19.4,23.7 L23.9,18.7 L30,16.3 L37.2,17.6 L43,22.5 L45.7,30" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 
