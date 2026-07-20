@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SIMBIOSIA — Estudio de ilustración y comunicación científica</title>
+<meta name="description" content="SIMBIOSIA traduce ciencia compleja en imágenes que emocionan, conectan y transforman. Ilustración científica, animación y storytelling para biotech, climate tech y divulgación.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+<style>
+  .hero{ min-height:100svh; display:flex; align-items:center; padding-top:100px; padding-bottom:60px; }
+  .hero .wrap{ display:grid; grid-template-columns:1.1fr 0.9fr; gap:40px; align-items:center; }
+  .vertical-strip{ position:absolute; left:8px; top:0; bottom:0; display:flex; align-items:center; pointer-events:none; }
+  .vertical-strip span{ writing-mode:vertical-rl; font-family:'JetBrains Mono', monospace; font-size:11px; letter-spacing:0.3em; color:var(--periquito); opacity:0.65; white-space:nowrap; }
+  .hero h1{ font-size:clamp(40px, 6vw, 76px); line-height:1.06; font-weight:700; letter-spacing:-0.01em; margin-bottom:26px; }
+  .hero h1 em{ font-style:italic; color:var(--vermillion); }
+  .hero p.lead{ font-size:18px; max-width:480px; color:rgba(27,24,16,0.78); margin-bottom:36px; }
+  .hero-ctas{ display:flex; gap:16px; flex-wrap:wrap; }
+  .specimen{ position:relative; display:flex; align-items:center; justify-content:center; }
+  .specimen .blob{ position:absolute; width:340px; height:340px; border-radius:50%; background:radial-gradient(circle at 35% 30%, rgba(111,168,58,0.30), rgba(225,75,42,0.12) 55%, transparent 75%); filter:blur(2px); animation:breathe 8s ease-in-out infinite; }
+  @keyframes breathe{ 0%,100%{ transform:scale(1); } 50%{ transform:scale(1.06); } }
+  .specimen svg#spiral{ width:min(420px, 90%); animation:spin 90s linear infinite; transform-origin:150px 150px; }
+  @keyframes spin{ to{ transform:rotate(360deg); } }
+  .specimen .tag{ position:absolute; bottom:6%; right:2%; background:var(--paper); border:1px solid var(--line); padding:8px 12px; font-family:'JetBrains Mono', monospace; font-size:10.5px; letter-spacing:0.06em; color:var(--periquito); box-shadow:3px 3px 0 var(--vermillion); }
+  .manifesto{ padding:130px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+  .servicios{ padding:150px 0; }
+  .servicios-head{ display:flex; justify-content:space-between; align-items:flex-end; gap:24px; margin-bottom:70px; flex-wrap:wrap; }
+  .servicios-head h2{ font-size:clamp(32px,4vw,52px); font-weight:600; max-width:560px; }
+  .servicios-head p{ max-width:340px; color:rgba(27,24,16,0.7); font-size:15px; }
+  .equipo{ padding:150px 0; }
+  .equipo-head{ margin-bottom:70px; max-width:640px; }
+  .equipo-head h2{ font-size:clamp(32px,4vw,52px); font-weight:600; margin-bottom:18px; }
+  .equipo-head p{ color:rgba(27,24,16,0.7); font-size:16px; }
+  @media (max-width:900px){
+    .hero .wrap{ grid-template-columns:1fr; }
+    .specimen{ order:-1; margin-bottom:20px; }
+    .vertical-strip{ display:none; }
+  }
+</style>
+</head>
+<body data-page="home">
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo-mark"><img src="assets/logo-wordmark.png" alt="SIMBIOSIA"></a>
+    <div class="nav-links">
+      <a href="index.html" class="active" data-i18n="nav.home">Home</a>
+      <a href="about.html" data-i18n="nav.about">About</a>
+      <a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a>
+      <a href="contact.html" data-i18n="nav.contact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <button class="lang-toggle" id="langToggle" type="button">EN</button>
+      <a href="contact.html" class="btn solid" data-i18n="nav.cta">Hablemos →</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="vertical-strip">
+    <span data-i18n="hero.strip">ILUSTRACIÓN CIENTÍFICA · MICROBIOLOGÍA · OCÉANOS · BIOTECH · CLIMATE TECH ·</span>
+  </div>
+  <div class="wrap">
+    <div>
+      <div class="eyebrow" data-i18n="hero.eyebrow">Estudio de comunicación científica</div>
+      <h1 data-i18n="hero.h1">Traducimos la ciencia en <em>imágenes</em> que emocionan.</h1>
+      <p class="lead" data-i18n="hero.lead">Somos SIMBIOSIA: un estudio creativo que une rigor científico y sensibilidad artística para convertir ideas complejas en historias visuales claras, bellas y memorables.</p>
+      <div class="hero-ctas">
+        <a href="#servicios" class="btn solid" data-i18n="hero.cta1">Ver servicios</a>
+        <a href="#equipo" class="btn" data-i18n="hero.cta2">Conocer al equipo</a>
+      </div>
+    </div>
+    <div class="specimen">
+      <div class="blob"></div>
+      <svg id="spiral" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+        <path d="M156,150 L157.8,154.5 L156,160.4 L150,165 L141,165.6 L131.8,160.5 L126,150 L126.6,136.5 L135,124 L150,117 L168,118.8 L183.8,130.5 L192,150 L189,172.5 L174,191.6 L150,201 L123,196.8 L100.6,178.5 L90,150 L95.4,118.5 L117,92.8 L150,81 L186,87.6 L215,112.5 L228,150"
+          fill="none" stroke="#E14B2A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="150" cy="150" r="3" fill="#6FA83A"/>
+        <g stroke="#6FA83A" stroke-width="1.2" opacity="0.65">
+          <line x1="156" y1="150" x2="163" y2="145"/>
+          <line x1="126" y1="150" x2="118" y2="150"/>
+          <line x1="150" y1="117" x2="150" y2="106"/>
+          <line x1="192" y1="150" x2="203" y2="150"/>
+          <line x1="150" y1="81" x2="150" y2="68"/>
+          <line x1="228" y1="150" x2="242" y2="150"/>
+        </g>
+      </svg>
+      <div class="tag"><span data-i18n="hero.tag">FIG. 01 — Ammonoidea sp., ref. visual</span></div>
+    </div>
+  </div>
+</header>
+
+<!-- MANIFESTO -->
+<section class="manifesto pull reveal">
+  <div class="wrap">
+    <blockquote data-i18n="manifesto.quote">No solo hacemos imágenes: <em>traducimos ciencia.</em> Entendemos el lenguaje científico y lo convertimos en historias visuales que informan, emocionan e inspiran.</blockquote>
+    <p class="sub" data-i18n="manifesto.sub">Trabajamos en la intersección entre ciencia, naturaleza, arte y tecnología — para acercar el conocimiento a quienes tienen que entenderlo, financiarlo o enseñarlo.</p>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section class="servicios reveal" id="servicios">
+  <div class="wrap">
+    <div class="servicios-head">
+      <h2 data-i18n="servicios.h2">Seis formas de dar forma visible a una idea científica.</h2>
+      <p data-i18n="servicios.p">Cada proyecto se trata como una lámina de campo: precisión, observación y una narrativa clara detrás de cada trazo.</p>
+    </div>
+    <div class="plate-grid">
+      <div class="plate">
+        <span class="num" data-i18n="servicios.n1">LÁM. 01</span>
+        <div><h3 data-i18n="servicios.t1">Figuras para papers</h3><p data-i18n="servicios.d1">Ilustraciones científicas de alto impacto para publicaciones y revistas indexadas.</p></div>
+      </div>
+      <div class="plate">
+        <span class="num" data-i18n="servicios.n2">LÁM. 02</span>
+        <div><h3 data-i18n="servicios.t2">Animación 2D / 3D</h3><p data-i18n="servicios.d2">Procesos, mecanismos y conceptos complejos visualizados en movimiento con precisión técnica.</p></div>
+      </div>
+      <div class="plate">
+        <span class="num" data-i18n="servicios.n3">LÁM. 03</span>
+        <div><h3 data-i18n="servicios.t3">Infografía compleja</h3><p data-i18n="servicios.d3">Datos difíciles convertidos en mensajes claros, jerarquizados y visualmente elegantes.</p></div>
+      </div>
+      <div class="plate">
+        <span class="num" data-i18n="servicios.n4">LÁM. 04</span>
+        <div><h3 data-i18n="servicios.t4">Storytelling biotech &amp; climate tech</h3><p data-i18n="servicios.d4">Narrativas visuales que comunican innovación, impacto y propósito a inversores y público.</p></div>
+      </div>
+      <div class="plate">
+        <span class="num" data-i18n="servicios.n5">LÁM. 05</span>
+        <div><h3 data-i18n="servicios.t5">Museos y exposiciones</h3><p data-i18n="servicios.d5">Diseño de experiencias visuales educativas e inmersivas para espacios de divulgación.</p></div>
+      </div>
+      <div class="plate">
+        <span class="num" data-i18n="servicios.n6">LÁM. 06</span>
+        <div><h3 data-i18n="servicios.t6">Branding científico</h3><p data-i18n="servicios.d6">Identidades visuales, material docente y contenido divulgativo con rigor y personalidad.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ENFOQUE (band) -->
+<section class="band reveal" id="enfoque">
+  <div class="wrap" style="display:grid; grid-template-columns:1fr 1fr; gap:80px;">
+    <div>
+      <div class="eyebrow" data-i18n="enfoque.eyebrow">Nuestro enfoque</div>
+      <h2 data-i18n="enfoque.h2">Rigor científico y sensibilidad artística, en la misma imagen.</h2>
+      <p style="margin-top:22px; max-width:420px;" data-i18n="enfoque.p">No perseguimos la ilustración bonita ni el dato frío por separado. Buscamos el punto donde ambos se sostienen mutuamente — de ahí el nombre.</p>
+    </div>
+    <div>
+      <div class="value-row"><span class="vnum">01</span><div><h4 data-i18n="enfoque.v1h">Rigor científico</h4><p data-i18n="enfoque.v1p">Cada pieza se valida contra la fuente: paper, dato o especialista.</p></div></div>
+      <div class="value-row"><span class="vnum">02</span><div><h4 data-i18n="enfoque.v2h">Sensibilidad artística</h4><p data-i18n="enfoque.v2p">La precisión no está reñida con la belleza ni con la emoción.</p></div></div>
+      <div class="value-row"><span class="vnum">03</span><div><h4 data-i18n="enfoque.v3h">Curiosidad y exploración</h4><p data-i18n="enfoque.v3p">Cada proyecto es una excusa para aprender algo nuevo de verdad.</p></div></div>
+      <div class="value-row"><span class="vnum">04</span><div><h4 data-i18n="enfoque.v4h">Comunicación accesible</h4><p data-i18n="enfoque.v4p">Traducimos jerga técnica en imágenes que cualquiera puede leer.</p></div></div>
+      <div class="value-row"><span class="vnum">05</span><div><h4 data-i18n="enfoque.v5h">Colaboración cercana</h4><p data-i18n="enfoque.v5p">Trabajamos codo a codo contigo, no como un proveedor externo.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- EQUIPO -->
+<section class="equipo reveal" id="equipo">
+  <div class="wrap">
+    <div class="equipo-head">
+      <div class="eyebrow" data-i18n="equipo.eyebrow">El equipo</div>
+      <h2 data-i18n="equipo.h2">Tres miradas, una misma obsesión.</h2>
+      <p data-i18n="equipo.p">SIMBIOSIA nace de la unión de tres perfiles complementarios que trabajan codo a codo, a la par, en cada proyecto.</p>
+    </div>
+    <div class="team-grid">
+      <div class="member" data-c="periquito">
+        <div class="badge">L</div>
+        <h3>Laura</h3>
+        <span class="role" data-i18n="equipo.role1">Ciencias del mar</span>
+        <p data-i18n="equipo.bio1">Ilustra ecosistemas oceánicos con precisión naturalista, desde el plancton hasta los grandes cetáceos.</p>
+      </div>
+      <div class="member" data-c="vermillion">
+        <div class="badge">P</div>
+        <h3>Patxi</h3>
+        <span class="role" data-i18n="equipo.role2">Ingeniería y 3D</span>
+        <p data-i18n="equipo.bio2">Convierte mecanismos y estructuras complejas en modelos y animaciones tridimensionales de alta fidelidad.</p>
+      </div>
+      <div class="member" data-c="gold">
+        <div class="badge">V</div>
+        <h3>Victoria</h3>
+        <span class="role" data-i18n="equipo.role3">Bioquímica y biología molecular</span>
+        <p data-i18n="equipo.bio3">Traduce procesos moleculares complejos en imágenes rigurosas, claras y visualmente precisas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO CTA -->
+<section class="contacto reveal" id="contacto">
+  <div class="wrap">
+    <div class="eyebrow" data-i18n="contacto.eyebrow">Hablemos</div>
+    <h2 data-i18n="contacto.h2">¿Tienes ciencia que <em>merece</em> ser vista?</h2>
+    <p class="lead" data-i18n="contacto.lead">Cuéntanos tu proyecto — paper, producto, exposición o marca — y lo convertimos en una historia visual a la altura.</p>
+    <a href="contact.html" class="btn solid" data-i18n="contacto.cta">Ir al formulario →</a>
+    <div class="contact-links">
+      <a href="mailto:hola@simbiosia.es">hola@simbiosia.es</a>
+      <a href="#" target="_blank" rel="noopener">Instagram</a>
+      <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="#" target="_blank" rel="noopener">Behance</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a href="index.html" class="logo-mark"><img src="assets/logo-wordmark.png" alt="SIMBIOSIA"></a>
+    <span class="mono" data-i18n="footer.copy">© 2026 SIMBIOSIA — Estudio de ilustración y comunicación científica</span>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+<script>
+  initLangToggle({
+    es: {
+      "nav.home":"Home","nav.about":"About","nav.portfolio":"Portfolio","nav.contact":"Contact","nav.cta":"Hablemos →",
+      "hero.strip":"ILUSTRACIÓN CIENTÍFICA · MICROBIOLOGÍA · OCÉANOS · BIOTECH · CLIMATE TECH ·",
+      "hero.eyebrow":"Estudio de comunicación científica",
+      "hero.h1":"Traducimos la ciencia en <em>imágenes</em> que emocionan.",
+      "hero.lead":"Somos SIMBIOSIA: un estudio creativo que une rigor científico y sensibilidad artística para convertir ideas complejas en historias visuales claras, bellas y memorables.",
+      "hero.cta1":"Ver servicios","hero.cta2":"Conocer al equipo",
+      "hero.tag":"FIG. 01 — Ammonoidea sp., ref. visual",
+      "manifesto.quote":"No solo hacemos imágenes: <em>traducimos ciencia.</em> Entendemos el lenguaje científico y lo convertimos en historias visuales que informan, emocionan e inspiran.",
+      "manifesto.sub":"Trabajamos en la intersección entre ciencia, naturaleza, arte y tecnología — para acercar el conocimiento a quienes tienen que entenderlo, financiarlo o enseñarlo.",
+      "servicios.h2":"Seis formas de dar forma visible a una idea científica.",
+      "servicios.p":"Cada proyecto se trata como una lámina de campo: precisión, observación y una narrativa clara detrás de cada trazo.",
+      "servicios.n1":"LÁM. 01","servicios.n2":"LÁM. 02","servicios.n3":"LÁM. 03","servicios.n4":"LÁM. 04","servicios.n5":"LÁM. 05","servicios.n6":"LÁM. 06",
+      "servicios.t1":"Figuras para papers","servicios.d1":"Ilustraciones científicas de alto impacto para publicaciones y revistas indexadas.",
+      "servicios.t2":"Animación 2D / 3D","servicios.d2":"Procesos, mecanismos y conceptos complejos visualizados en movimiento con precisión técnica.",
+      "servicios.t3":"Infografía compleja","servicios.d3":"Datos difíciles convertidos en mensajes claros, jerarquizados y visualmente elegantes.",
+      "servicios.t4":"Storytelling biotech &amp; climate tech","servicios.d4":"Narrativas visuales que comunican innovación, impacto y propósito a inversores y público.",
+      "servicios.t5":"Museos y exposiciones","servicios.d5":"Diseño de experiencias visuales educativas e inmersivas para espacios de divulgación.",
+      "servicios.t6":"Branding científico","servicios.d6":"Identidades visuales, material docente y contenido divulgativo con rigor y personalidad.",
+      "enfoque.eyebrow":"Nuestro enfoque",
+      "enfoque.h2":"Rigor científico y sensibilidad artística, en la misma imagen.",
+      "enfoque.p":"No perseguimos la ilustración bonita ni el dato frío por separado. Buscamos el punto donde ambos se sostienen mutuamente — de ahí el nombre.",
+      "enfoque.v1h":"Rigor científico","enfoque.v1p":"Cada pieza se valida contra la fuente: paper, dato o especialista.",
+      "enfoque.v2h":"Sensibilidad artística","enfoque.v2p":"La precisión no está reñida con la belleza ni con la emoción.",
+      "enfoque.v3h":"Curiosidad y exploración","enfoque.v3p":"Cada proyecto es una excusa para aprender algo nuevo de verdad.",
+      "enfoque.v4h":"Comunicación accesible","enfoque.v4p":"Traducimos jerga técnica en imágenes que cualquiera puede leer.",
+      "enfoque.v5h":"Colaboración cercana","enfoque.v5p":"Trabajamos codo a codo contigo, no como un proveedor externo.",
+      "equipo.eyebrow":"El equipo",
+      "equipo.h2":"Tres miradas, una misma obsesión.",
+      "equipo.p":"SIMBIOSIA nace de la unión de tres perfiles complementarios que trabajan codo a codo, a la par, en cada proyecto.",
+      "equipo.role1":"Ciencias del mar","equipo.bio1":"Ilustra ecosistemas oceánicos con precisión naturalista, desde el plancton hasta los grandes cetáceos.",
+      "equipo.role2":"Ingeniería y 3D","equipo.bio2":"Convierte mecanismos y estructuras complejas en modelos y animaciones tridimensionales de alta fidelidad.",
+      "equipo.role3":"Bioquímica y biología molecular","equipo.bio3":"Traduce procesos moleculares complejos en imágenes rigurosas, claras y visualmente precisas.",
+      "contacto.eyebrow":"Hablemos",
+      "contacto.h2":"¿Tienes ciencia que <em>merece</em> ser vista?",
+      "contacto.lead":"Cuéntanos tu proyecto — paper, producto, exposición o marca — y lo convertimos en una historia visual a la altura.",
+      "contacto.cta":"Ir al formulario →",
+      "footer.copy":"© 2026 SIMBIOSIA — Estudio de ilustración y comunicación científica"
+    },
+    en: {
+      "nav.home":"Home","nav.about":"About","nav.portfolio":"Portfolio","nav.contact":"Contact","nav.cta":"Let's talk →",
+      "hero.strip":"SCIENTIFIC ILLUSTRATION · MICROBIOLOGY · OCEANS · BIOTECH · CLIMATE TECH ·",
+      "hero.eyebrow":"Scientific communication studio",
+      "hero.h1":"We translate science into <em>images</em> that move people.",
+      "hero.lead":"We're SIMBIOSIA: a creative studio that pairs scientific rigor with artistic sensibility to turn complex ideas into clear, beautiful, memorable visual stories.",
+      "hero.cta1":"View services","hero.cta2":"Meet the team",
+      "hero.tag":"FIG. 01 — Ammonoidea sp., visual ref.",
+      "manifesto.quote":"We don't just make images: <em>we translate science.</em> We understand scientific language and turn it into visual stories that inform, move and inspire.",
+      "manifesto.sub":"We work at the intersection of science, nature, art and technology — to bring knowledge closer to the people who need to understand it, fund it, or teach it.",
+      "servicios.h2":"Six ways to give a scientific idea a visible form.",
+      "servicios.p":"Every project is treated like a field plate: precision, observation, and a clear narrative behind every stroke.",
+      "servicios.n1":"PLATE 01","servicios.n2":"PLATE 02","servicios.n3":"PLATE 03","servicios.n4":"PLATE 04","servicios.n5":"PLATE 05","servicios.n6":"PLATE 06",
+      "servicios.t1":"Figures for papers","servicios.d1":"High-impact scientific illustrations for publications and indexed journals.",
+      "servicios.t2":"2D / 3D animation","servicios.d2":"Complex processes, mechanisms and concepts brought to life with technical precision.",
+      "servicios.t3":"Complex infographics","servicios.d3":"Difficult data turned into clear, hierarchical and visually elegant messages.",
+      "servicios.t4":"Biotech &amp; climate tech storytelling","servicios.d4":"Visual narratives that communicate innovation, impact and purpose to investors and audiences.",
+      "servicios.t5":"Museums &amp; exhibitions","servicios.d5":"Educational, immersive visual experience design for outreach spaces.",
+      "servicios.t6":"Scientific branding","servicios.d6":"Visual identities, teaching material and outreach content with rigor and personality.",
+      "enfoque.eyebrow":"Our approach",
+      "enfoque.h2":"Scientific rigor and artistic sensibility, in the same image.",
+      "enfoque.p":"We don't chase pretty illustration or cold data on their own. We look for the point where both hold each other up — hence the name.",
+      "enfoque.v1h":"Scientific rigor","enfoque.v1p":"Every piece is checked against the source: a paper, a dataset, a specialist.",
+      "enfoque.v2h":"Artistic sensibility","enfoque.v2p":"Precision doesn't have to come at the expense of beauty or emotion.",
+      "enfoque.v3h":"Curiosity and exploration","enfoque.v3p":"Every project is an excuse to genuinely learn something new.",
+      "enfoque.v4h":"Accessible communication","enfoque.v4p":"We turn technical jargon into images anyone can read.",
+      "enfoque.v5h":"Close collaboration","enfoque.v5p":"We work side by side with you, not as an outside vendor.",
+      "equipo.eyebrow":"The team",
+      "equipo.h2":"Three perspectives, one shared obsession.",
+      "equipo.p":"SIMBIOSIA is the work of three complementary profiles, working side by side, as equals, on every project.",
+      "equipo.role1":"Marine science","equipo.bio1":"Illustrates ocean ecosystems with naturalistic precision, from plankton to great whales.",
+      "equipo.role2":"Engineering &amp; 3D","equipo.bio2":"Turns complex mechanisms and structures into high-fidelity 3D models and animations.",
+      "equipo.role3":"Biochemistry &amp; molecular biology","equipo.bio3":"Translates complex molecular processes into images that are rigorous, clear and visually precise.",
+      "contacto.eyebrow":"Let's talk",
+      "contacto.h2":"Got science that <em>deserves</em> to be seen?",
+      "contacto.lead":"Tell us about your project — a paper, a product, an exhibition, a brand — and we'll turn it into a visual story worthy of it.",
+      "contacto.cta":"Go to the form →",
+      "footer.copy":"© 2026 SIMBIOSIA — Scientific illustration and communication studio"
+    }
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — SIMBIOSIA</title>
+<meta name="description" content="Cuéntanos tu proyecto científico. Escríbenos a hola@simbiosia.es o rellena el formulario.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-page="contact">
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo-mark"><img src="assets/logo-wordmark.png" alt="SIMBIOSIA"></a>
+    <div class="nav-links">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="about.html" data-i18n="nav.about">About</a>
+      <a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a>
+      <a href="contact.html" class="active" data-i18n="nav.contact">Contact</a>
+    </div>
+    <div class="nav-right">
+      <button class="lang-toggle" id="langToggle" type="button">EN</button>
+      <a href="contact.html" class="btn solid" data-i18n="nav.cta">Hablemos →</a>
+    </div>
+  </div>
+</nav>
+
+<header class="page-head">
+  <div class="wrap">
+    <div class="eyebrow" data-i18n="head.eyebrow">Contacto</div>
+    <h1 data-i18n="head.h1">Cuéntanos qué ciencia quieres hacer visible.</h1>
+    <p class="lead" data-i18n="head.lead">Papers, productos, exposiciones o marcas — respondemos a todo. Escríbenos directamente o usa el formulario.</p>
+  </div>
+</header>
+
+<section class="form-section reveal">
+  <div class="wrap form-grid">
+
+    <div class="form-side">
+      <h2 data-i18n="side.h2">Hablemos directamente</h2>
+      <p data-i18n="side.p">Si prefieres saltarte el formulario, escríbenos a nuestro correo o encuéntranos en redes. Somos un equipo pequeño — leemos todo personalmente.</p>
+
+      <div class="info-row">
+        <span class="k" data-i18n="side.k1">Email</span>
+        <span class="v"><a href="mailto:hola@simbiosia.es" class="mail-link" style="font-size:16px;">hola@simbiosia.es</a></span>
+      </div>
+      <div class="info-row">
+        <span class="k" data-i18n="side.k2">Instagram</span>
+        <span class="v"><a href="#" target="_blank" rel="noopener">@simbiosia.studio</a></span>
+      </div>
+      <div class="info-row">
+        <span class="k" data-i18n="side.k3">LinkedIn</span>
+        <span class="v"><a href="#" target="_blank" rel="noopener">SIMBIOSIA Studio</a></span>
+      </div>
+      <div class="info-row">
+        <span class="k" data-i18n="side.k4">Behance</span>
+        <span class="v"><a href="#" target="_blank" rel="noopener">/simbiosia</a></span>
+      </div>
+    </div>
+
+    <div>
+      <form class="contact-form" id="contactForm" action="mailto:hola@simbiosia.es" method="get" enctype="text/plain">
+        <div class="field">
+          <label for="name" data-i18n="form.name">Nombre</label>
+          <input type="text" id="name" name="Nombre" required>
+        </div>
+        <div class="field">
+          <label for="email" data-i18n="form.email">Email</label>
+          <input type="email" id="email" name="Email" required>
+        </div>
+        <div class="field">
+          <label for="type" data-i18n="form.type">Tipo de proyecto</label>
+          <select id="type" name="Tipo_de_proyecto">
+            <option data-i18n="form.opt1">Figuras para paper</option>
+            <option data-i18n="form.opt2">Animación 2D/3D</option>
+            <option data-i18n="form.opt3">Infografía</option>
+            <option data-i18n="form.opt4">Museo o exposición</option>
+            <option data-i18n="form.opt5">Branding científico</option>
+            <option data-i18n="form.opt6">Otro</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="message" data-i18n="form.message">Cuéntanos tu proyecto</label>
+          <textarea id="message" name="Mensaje" required></textarea>
+        </div>
+        <button type="submit" class="btn solid" style="align-self:flex-start;" data-i18n="form.submit">Enviar mensaje →</button>
+        <p class="form-note" data-i18n="form.note">Al enviar se abrirá tu cliente de correo con estos datos ya escritos, listos para mandar a hola@simbiosia.es.</p>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a href="index.html" class="logo-mark"><img src="assets/logo-wordmark.png" alt="SIMBIOSIA"></a>
+    <span class="mono" data-i18n="footer.copy">© 2026 SIMBIOSIA — Estudio de ilustración y comunicación científica</span>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+<script>
+  initLangToggle({
+    es: {
+      "nav.home":"Home","nav.about":"About","nav.portfolio":"Portfolio","nav.contact":"Contact","nav.cta":"Hablemos →",
+      "head.eyebrow":"Contacto",
+      "head.h1":"Cuéntanos qué ciencia quieres hacer visible.",
+      "head.lead":"Papers, productos, exposiciones o marcas — respondemos a todo. Escríbenos directamente o usa el formulario.",
+      "side.h2":"Hablemos directamente",
+      "side.p":"Si prefieres saltarte el formulario, escríbenos a nuestro correo o encuéntranos en redes. Somos un equipo pequeño — leemos todo personalmente.",
+      "side.k1":"Email","side.k2":"Instagram","side.k3":"LinkedIn","side.k4":"Behance",
+      "form.name":"Nombre","form.email":"Email","form.type":"Tipo de proyecto",
+      "form.opt1":"Figuras para paper","form.opt2":"Animación 2D/3D","form.opt3":"Infografía","form.opt4":"Museo o exposición","form.opt5":"Branding científico","form.opt6":"Otro",
+      "form.message":"Cuéntanos tu proyecto","form.submit":"Enviar mensaje →",
+      "form.note":"Al enviar se abrirá tu cliente de correo con estos datos ya escritos, listos para mandar a hola@simbiosia.es.",
+      "footer.copy":"© 2026 SIMBIOSIA — Estudio de ilustración y comunicación científica"
+    },
+    en: {
+      "nav.home":"Home","nav.about":"About","nav.portfolio":"Portfolio","nav.contact":"Contact","nav.cta":"Let's talk →",
+      "head.eyebrow":"Contact",
+      "head.h1":"Tell us what science you want to make visible.",
+      "head.lead":"Papers, products, exhibitions or brands — we reply to everything. Write to us directly or use the form.",
+      "side.h2":"Let's talk directly",
+      "side.p":"If you'd rather skip the form, email us or find us on social media. We're a small team — we read everything personally.",
+      "side.k1":"Email","side.k2":"Instagram","side.k3":"LinkedIn","side.k4":"Behance",
+      "form.name":"Name","form.email":"Email","form.type":"Project type",
+      "form.opt1":"Figures for a paper","form.opt2":"2D/3D animation","form.opt3":"Infographics","form.opt4":"Museum or exhibition","form.opt5":"Scientific branding","form.opt6":"Other",
+      "form.message":"Tell us about your project","form.submit":"Send message →",
+      "form.note":"Submitting opens your email client with this filled in, ready to send to hola@simbiosia.es.",
+      "footer.copy":"© 2026 SIMBIOSIA — Scientific illustration and communication studio"
+    }
+  });
+</script>
+</body>
+</html>
