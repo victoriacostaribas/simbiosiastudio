@@ -35,9 +35,22 @@
   .equipo-head h2{ font-size:clamp(32px,4vw,52px); font-weight:600; margin-bottom:18px; }
   .equipo-head p{ color:rgba(27,24,16,0.7); font-size:16px; }
   @media (max-width:900px){
+    .hero{ padding-top:90px; padding-bottom:40px; min-height:auto; }
     .hero .wrap{ grid-template-columns:1fr; }
-    .specimen{ order:-1; margin-bottom:20px; }
+    .specimen{ order:-1; margin-bottom:10px; flex-direction:column; }
+    .specimen .blob{ width:240px; height:240px; }
+    .specimen svg#spiral{ width:min(280px, 78vw); }
+    .specimen .tag{ position:static; margin-top:14px; box-shadow:none; display:inline-block; }
     .vertical-strip{ display:none; }
+    .manifesto{ padding:70px 0; }
+    .servicios{ padding:80px 0; }
+    .equipo{ padding:80px 0; }
+    .servicios-head{ flex-direction:column; align-items:flex-start; margin-bottom:40px; }
+    .equipo-head{ margin-bottom:40px; }
+  }
+  @media (max-width:520px){
+    .hero h1{ font-size:clamp(32px, 9vw, 44px); }
+    .hero p.lead{ font-size:16px; }
   }
 </style>
 </head>
@@ -140,7 +153,7 @@
 
 <!-- ENFOQUE (band) -->
 <section class="band reveal" id="enfoque">
-  <div class="wrap" style="display:grid; grid-template-columns:1fr 1fr; gap:80px;">
+  <div class="wrap band-cols">
     <div>
       <div class="eyebrow" data-i18n="enfoque.eyebrow">Nuestro enfoque</div>
       <h2 data-i18n="enfoque.h2">Rigor científico y sensibilidad artística, en la misma imagen.</h2>
